@@ -8,7 +8,7 @@ export function debounce(func, wait, immediate) {
         const context = this;
         const args = arguments;
 
-        const later = function later() {
+        const later = function() {
 
             timeout = null;
 
