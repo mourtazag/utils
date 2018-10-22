@@ -96,8 +96,8 @@ export function isIE() {
 
 export function emptyElement(node) {
     
-    while(node.firstChild) {
-        node.removeChild(node.firstChild);
+    while(node.lastChild) {
+        node.removeChild(node.lastChild);
     }
-    
+
 }
