@@ -1,14 +1,14 @@
 
 export function debounce(func, wait, immediate) {
 
-    var timeout = void 0;
+    let timeout = void 0;
 
     return function () {
 
-        var context = this;
-        var args = arguments;
+        const context = this;
+        const args = arguments;
 
-        var later = function later() {
+        const later = function later() {
 
             timeout = null;
 
@@ -17,7 +17,7 @@ export function debounce(func, wait, immediate) {
             }
         };
 
-        var callNow = immediate && !timeout;
+        const callNow = immediate && !timeout;
 
         clearTimeout(timeout);
         timeout = setTimeout(later, wait || 200);
